@@ -4,11 +4,9 @@
 # ToDo: change cards nomenclature
 # ToDo: add more tavern strats
 # ToDo: count shards/branches in tavern balance
+# ToDo: Add event rewards in heroic scroll profit. Permit different event fulfilling approaches
 
-import gold_gem_rate
-import event_profit
-import spend_gems
-import tavern_profit
+from src import spend_gems, tavern_profit, event_profit, gold_gem_rate
 
 # Variable declaration
 vip = 4
@@ -62,7 +60,7 @@ class IngemValue(object):
 
 print("\n\nResults for user VIP " + str(vip) + " with lvl " + str(level))
 gemValues = IngemValue(vip, level, cards, whale)
-print(gold_gem_rate.get_gold_ratio(vip, level, cards+whale))
+print(gold_gem_rate.get_gold_ratio(vip, level, cards + whale))
 print(gemValues.shard3, gemValues.shard4, gemValues.shard5)
 profit_hs, profit_hs_event = event_profit.get_profit_hs(gemValues)
 print('\nHeroic Scroll profit:')

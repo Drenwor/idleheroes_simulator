@@ -12,7 +12,7 @@
 # WC = wishing coin
 # AT = arena ticket
 
-import tavern_profit
+from src import tavern_profit
 
 marauder_odds = 0.2
 marauder_reward = 320
